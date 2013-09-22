@@ -9,7 +9,7 @@ Install
 Example
 ---
 
-See [demo]()
+See [demo](http://component-kelonye.rhcloud.com/#/523ed2cc7ca3797703000007)
 
     $ make example
 
