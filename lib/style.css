@@ -1,0 +1,92 @@
+/**
+ * https://github.com/segmentio/toggle/blob/master/index.css
+ */
+
+.component-toggle{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  height: 1em;
+  font-size: 2em;
+  border-radius: 1em;
+  width: 2.5em; /* default, but changeable */
+  cursor: pointer;
+}
+
+.component-toggle label,
+.component-toggle input{
+  pointer-events: none;
+}
+
+.component-toggle input{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1em;
+  width: 1em;
+  margin: 0;
+  appearance: none;
+  transition: left .2s ease-in, margin .2s ease-in;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 1em;
+  background-color: #fff;
+
+}
+
+.component-toggle label{
+  position: absolute;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  font-size: 0.55em;
+  padding: 0.4em;
+  transition: transform .2s ease-in;
+}
+
+.component-toggle label:nth-of-type(1){
+  right: 1em; /* account for 1em toggle */
+  left: 0;
+}
+
+.component-toggle label:nth-of-type(2){
+  right: 0;
+  left: 1em; /* account for 1em toggle */
+}
+
+
+/**
+ * On.
+ */
+
+.component-toggle.on input{
+  margin-left: -1em;
+  left: 100%;
+}
+
+.component-toggle.on label:nth-of-type(2){
+  transform: translateX(100%);
+}
+
+
+/**
+ * Off.
+ */
+
+.component-toggle.off label:nth-of-type(1){
+  transform: translateX(-100%);
+}
+
+/* theme */
+
+
+.component-toggle.on{
+  background-color: #a6c776;
+  color: #7a9d46;
+}
+
+.component-toggle.off{
+  background-color: #dfd7c9;
+}

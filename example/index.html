@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='../public/public.css' rel='stylesheet' media='screen'>
+    <style>
+    body{
+      font-size: 15px
+    }
+    </style>
+  </head>
+  <body>
+    <script src='../public/public.js'></script>
+    <script data-template-name='index' type='text/x-handlebars'>
+      {{view App.ToggleView}}
+      <br><br><br>
+      {{model}}
+    </script>
+    <script type='text/javascript'>
+      var toggle = require('ember-toggle');
+      App = Em.Application.create();
+      App.ToggleView = Em.ContainerView.extend(toggle, {
+        valueBinding: 'controller.model'
+      });
+      App.IndexRoute = Em.Route.extend({
+        model: function(){
+          return true
+        }
+      });
+    </script>
+  </body>
+</html>

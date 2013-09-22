@@ -1,0 +1,15 @@
+{
+  "name": "ember-toggle",
+  "version": "0.0.1",
+  "license": "MIT",
+  "dependencies": {
+    "kelonye/ember": "*"
+  },
+  "main": "lib/index.js",
+  "scripts": [
+    "lib/index.js"
+  ],
+  "styles": [
+    "lib/style.css"
+  ]
+}
