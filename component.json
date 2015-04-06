@@ -1,9 +1,9 @@
 {
   "name": "ember-toggle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "dependencies": {
-    "kelonye/ember": "1.0.0-rc6"
+    "kelonye/ember": "1.9.1"
   },
   "main": "lib/index.js",
   "scripts": [

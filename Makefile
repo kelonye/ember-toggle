@@ -9,7 +9,7 @@ components:
 	@$(component) install --dev
 
 public: lib/index.js lib/style.css
-	node -e "require('component-hooks')( {program: {dev: true}}, {}, function(){});"
+	$(component) build --dev -n $@ -o $@
 	@touch $@
 
 example: default

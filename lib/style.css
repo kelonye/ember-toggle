@@ -25,7 +25,8 @@
   height: 1em;
   width: 1em;
   margin: 0;
-  appearance: none;
+  appearance: inherit;
+  -webkit-appearance: inherit !important;
   transition: left .2s ease-in, margin .2s ease-in;
   font-size: 1em;
   box-sizing: border-box;
