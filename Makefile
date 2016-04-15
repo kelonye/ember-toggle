@@ -1,21 +1,21 @@
-component = ./node_modules/component-hooks/node_modules/.bin/component
+component = ./node_modules/.bin/component
+folder = example/components/kelonye-ember-toggle/
 
-default: node_modules components public
+public: node_modules components $(shell find lib -type f)
+	@mkdir -p $(folder)
+	@cp -rf components/* example/components
+	@cp -f component.json $(folder)
+	@cp -rf lib $(folder)
+	@node build.js
+	@touch $@
 
 node_modules:
 	@npm install
 
 components:
-	@$(component) install --dev
+	@$(component) install
 
-public: lib/index.js lib/style.css
-	$(component) build --dev -n $@ -o $@
-	@touch $@
-
-example: default
+example: public
 	@xdg-open example/index.html
 
-clean:
-	@rm -rf public
-
-.PHONY: clean example
+.PHONY: example

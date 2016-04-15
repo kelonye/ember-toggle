@@ -1,0 +1,9 @@
+{
+  "name": "example",
+  "dependencies": {
+    "kelonye/ember-toggle": "*"
+  },
+  "scripts": [
+    "index.js"
+  ]
+}

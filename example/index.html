@@ -11,21 +11,9 @@
   <body>
     <script src='../public/public.js'></script>
     <script data-template-name='index' type='text/x-handlebars'>
-      {{view "toggle"}}
+      {{toggle-input value=model}}
       <br><br><br>
       {{model}}
-    </script>
-    <script type='text/javascript'>
-      var toggle = require('ember-toggle');
-      App = Em.Application.create();
-      App.ToggleView = Em.ContainerView.extend(toggle, {
-        valueBinding: 'controller.model'
-      });
-      App.IndexRoute = Em.Route.extend({
-        model: function(){
-          return true
-        }
-      });
     </script>
   </body>
 </html>
