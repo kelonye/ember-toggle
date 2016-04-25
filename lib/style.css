@@ -13,28 +13,29 @@
   cursor: pointer;
 }
 
-.component-toggle label,
 .component-toggle input{
-  pointer-events: none;
+  display: none; /* just there for sematics */
 }
 
-.component-toggle input{
+.component-toggle .toggle-switch {
   position: absolute;
   left: 0;
   top: 0;
   height: 1em;
   width: 1em;
-  margin: 0;
-  appearance: inherit;
-  -webkit-appearance: inherit !important;
-  transition: left .2s ease-in, margin .2s ease-in;
-  font-size: 1em;
-  box-sizing: border-box;
-  background-clip: padding-box;
   border: 1px solid transparent;
   border-radius: 1em;
   background-color: #fff;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-transition: left .2s ease-in, margin .2s ease-in;
+          transition: left .2s ease-in, margin .2s ease-in;
+}
 
+.component-toggle label,
+.component-toggle input{
+  pointer-events: none;
 }
 
 .component-toggle label{
@@ -44,6 +45,10 @@
   text-align: center;
   font-size: 0.55em;
   padding: 0.4em;
+  -webkit-transition: transform .2s ease-in;
+  -moz-transition: transform .2s ease-in;
+  -ms-transition: transform .2s ease-in;
+  -o-transition: transform .2s ease-in;
   transition: transform .2s ease-in;
 }
 
@@ -62,12 +67,16 @@
  * On.
  */
 
-.component-toggle.on input{
+.component-toggle.on .toggle-switch{
   margin-left: -1em;
   left: 100%;
 }
 
 .component-toggle.on label:nth-of-type(2){
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
   transform: translateX(100%);
 }
 
@@ -77,6 +86,10 @@
  */
 
 .component-toggle.off label:nth-of-type(1){
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
